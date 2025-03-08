@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat</title>
+    <link rel="stylesheet" href="/static/css/chatStyles.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+
+  <body>
+    <div class="main-container">
+      <div class="video-container">
+        <!-- Vídeo será adicionado aqui -->
+        <video width="286.936" preload="auto">
+          <source src="/static/video/step01.mp4" type="video/mp4" />
+          Seu navegador não suporta o elemento de vídeo.
+        </video>
+      </div>
+
+      <div>
+        <div class="chatbox">
+          <!-- Mensagens serão adicionadas aqui -->
+        </div>
+        <div class="input-area">
+          <input
+            type="text"
+            id="userInput"
+            placeholder="Vamos criar o seu comunicado incrível"
+          />
+          <button id="sendBtn">
+            <img src="/static/images/play.svg" alt="Enviar" />
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="/static/js/chatScript.js"></script>
+  </body>
+</html>

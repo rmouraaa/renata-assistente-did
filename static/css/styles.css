@@ -1,0 +1,146 @@
+/* Reset de CSS básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  font-family: "Sora", sans-serif;
+  background-image: url("/static/images/bg.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+header,
+main,
+footer {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.container {
+  width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column; /* Isso faz com que o vídeo e o chat sejam empilhados verticalmente */
+  align-items: center; /* Centraliza os elementos horizontalmente */
+  gap: 20px; /* Espaço entre o vídeo e o chat */
+}
+
+.avatar video {
+  width: 412px;
+  height: auto;
+  border-radius: 50%; /* Isso torna o vídeo redondo */
+  margin-top: 185px; /* Margem superior de 104px */
+  animation: bounceScale 1s; /* Aplica a animação bounceScale com duração de 1 segundo */
+}
+
+.chat {
+  display: flex; /* Ativa o Flexbox */
+  align-items: center; /* Centraliza verticalmente */
+  gap: 25px; /* Distância entre o input e o botão */
+  animation: bounceScale 1s; /* Aplica a animação bounceScale com duração de 1 segundo */
+  transition: transform 0.5s; /* Suaviza a animação de transformação */
+}
+
+.chat input {
+  padding: 10px 30px; /* 10px para o topo e fundo, 30px para os lados */
+  width: 1065px;
+  height: 82px;
+  border-radius: 69.401px;
+  background: #fff;
+  margin-right: 10px;
+  border: none;
+  outline: none; /* Remove o contorno padrão do navegador */
+  transition: border 0.3s; /* Adiciona uma transição suave para a borda */
+
+  color: #17092e;
+  font-family: "Sora", sans-serif; /* Adicionado fallback para sans-serif */
+  font-size: 21.456px;
+  font-style: normal;
+  font-weight: 300;
+}
+
+.chat input:focus {
+  border: 5px solid #8e4a4b; /* Adiciona uma borda quando o input está focado */
+}
+
+.chat button {
+  padding: 10px 15px;
+  width: 105px;
+  height: 105px;
+  border-radius: 69.401px;
+  background: linear-gradient(129deg, #17092e 11.13%, #3a2864 106.47%);
+  border: none; /* Remover a borda padrão */
+  display: flex; /* Usado para centralizar o ícone no botão */
+  align-items: center;
+  justify-content: center;
+  cursor: pointer; /* Muda o cursor para indicar que é clicável */
+  transition: transform 0.5s ease-out; /* Usando 'ease-out' para uma conclusão suave */
+}
+
+.chat button img {
+  width: 45px;
+  height: 45px;
+}
+
+@keyframes bounceScale {
+  0% {
+    transform: scale(0); /* Começa do tamanho 0 */
+  }
+  60% {
+    transform: scale(
+      1.1
+    ); /* Um pouco maior do que o tamanho original para o efeito "bounce" */
+  }
+  80% {
+    transform: scale(0.9); /* Diminui um pouco */
+  }
+  100% {
+    transform: scale(1); /* Retorna ao tamanho original */
+  }
+}
+
+.chat button:hover {
+  transform: scale(1.05); /* Aumenta o tamanho do botão em 5% */
+  background: linear-gradient(
+    129deg,
+    #8e4a4b 11.13%,
+    #3a2864 106.47%
+  ); /* Muda o background do botão */
+}
+
+.chat button:active {
+  transform: scale(
+    0.98
+  ); /* Diminui levemente o tamanho do botão quando clicado (ajuste sutil) */
+}
+
+.input-area button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(129deg, #8e4a4b 11.13%, #3a2864 106.47%);
+  cursor: pointer;
+}
+
+.input-area button:active {
+  transform: scale(1);
+}
+
+.input-area input:focus {
+  outline: none;
+  border: 2px solid #8e4a4b;
+}
